@@ -1,8 +1,8 @@
-# ASL.js
+# RahaUI.js
 
 A lightweight, dependency-free JavaScript component manager for building web applications with reusable HTML components.
 
-ASL.js provides a simple component system based on standard browser APIs. Components can have their own HTML, JavaScript, CSS, and state while remaining independent from external frameworks and build systems.
+RahaUI.js provides a simple component system based on standard browser APIs. Components can have their own HTML, JavaScript, CSS, and state while remaining independent from external frameworks and build systems.
 
 ---
 
@@ -23,12 +23,12 @@ ASL.js provides a simple component system based on standard browser APIs. Compon
 
 ## Installation
 
-ASL.js does not require npm or any external dependency.
+RahaUI.js does not require npm or any external dependency.
 
-Download `ASL.js` and include it in your HTML:
+Download `RahaUI.js` and include it in your HTML:
 
 ```html
-<script src="./ASL.js"></script>
+<script src="./RahaUI.js"></script>
 ```
 
 Then create a `ComponentManager`:
@@ -48,7 +48,7 @@ A typical project structure can look like this:
 ```text
 my-app/
 ├── index.html
-├── ASL.js
+├── RahaUI.js
 └── components/
     ├── todo/
     │   ├── todo.html
@@ -134,7 +134,7 @@ After registering a component, render it into an existing DOM element:
 app.render("todo", "#app");
 ```
 
-ASL.js loads the component HTML using `fetch()`, parses it with `DOMParser`, and inserts its contents into the selected element.
+RahaUI.js loads the component HTML using `fetch()`, parses it with `DOMParser`, and inserts its contents into the selected element.
 
 All elements inside the component receive a class containing the component name.
 
@@ -396,7 +396,7 @@ The following example demonstrates a Todo application using multiple nested comp
 ```text
 todo-app/
 ├── index.html
-├── ASL.js
+├── RahaUI.js
 │
 └── components/
     ├── todo/
@@ -447,7 +447,7 @@ A minimal `index.html`:
 
     <main id="app"></main>
 
-    <script src="./ASL.js"></script>
+    <script src="./RahaUI.js"></script>
 
     <script>
         const app = new ComponentManager();
@@ -523,7 +523,7 @@ A minimal `index.html`:
 
 # Progressive Web Apps
 
-ASL.js can be used to build Progressive Web Apps.
+RahaUI.js can be used to build Progressive Web Apps.
 
 A PWA requires a web app manifest. The manifest can be created manually or generated using the included `installer.html`.
 
@@ -569,7 +569,7 @@ The included `installer.html` provides a form for generating the manifest based 
 
 ## Service Worker
 
-ASL.js does not require a service worker.
+RahaUI.js does not require a service worker.
 
 If offline support or caching is required, a service worker can be added manually.
 
@@ -581,7 +581,7 @@ const CACHE_NAME = "my-app-v1";
 const ASSETS = [
     "/",
     "/index.html",
-    "/ASL.js",
+    "/RahaUI.js",
     "/manifest.json"
 ];
 
@@ -624,13 +624,13 @@ if ("serviceWorker" in navigator) {
 }
 ```
 
-The service worker is independent from ASL.js and can be modified according to the application's requirements.
+The service worker is independent from RahaUI.js and can be modified according to the application's requirements.
 
 ---
 
 # Browser Compatibility
 
-ASL.js relies on standard browser APIs, including:
+RahaUI.js relies on standard browser APIs, including:
 
 * `fetch()`
 * `DOMParser`
@@ -647,8 +647,8 @@ Since components are loaded using `fetch()`, the application should normally be 
 
 # License
 
-ASL.js is released under the **MIT License**.
+RahaUI.js is released under the **MIT License**.
 
-Copyright (c) 2026 Amir Hosseyn Moeini (ASL.js)
+Copyright (c) 2026 Amir Hosseyn Moeini (RahaUI.js)
 
 See [`LICENSE`](./LICENSE) for the complete license text.
